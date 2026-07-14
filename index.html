@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>KAMMAREDDY DISTRICT - BANSWADA</title>
+<title>KAMAREDDY DISTRICT - BANSWADA MANDAL</title>
 
 <style>
 
@@ -13,52 +12,84 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial, sans-serif;
+font-family:Arial,Helvetica,sans-serif;
 }
 
 body{
-background:#f2f5f9;
+background:#eef3f8;
 }
 
 header{
-background:#1565c0;
-color:white;
-padding:20px;
-text-align:center;
-}
-
-header h1{
-font-size:28px;
-}
-
-header h2{
-margin-top:10px;
-font-size:20px;
-}
-
-#search{
-margin-top:15px;
-width:90%;
-max-width:500px;
-padding:12px;
-border-radius:25px;
-border:none;
-font-size:16px;
-}
-
-.container{
-padding:20px;
-}
-
-.place{
-background:white;
-margin-bottom:15px;
-padding:15px;
-border-radius:15px;
 display:flex;
 justify-content:space-between;
 align-items:center;
-box-shadow:0 3px 8px rgba(0,0,0,0.15);
+background:#0b5394;
+padding:15px 25px;
+color:#fff;
+box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+.logo{
+width:70px;
+height:70px;
+object-fit:contain;
+}
+
+.title{
+text-align:center;
+flex:1;
+}
+
+.title h1{
+font-size:30px;
+margin-bottom:5px;
+}
+
+.title h2{
+font-size:18px;
+font-weight:normal;
+}
+
+.search-box{
+width:95%;
+max-width:800px;
+margin:20px auto;
+}
+
+.search-box input{
+width:100%;
+padding:14px;
+font-size:17px;
+border:1px solid #ccc;
+border-radius:10px;
+outline:none;
+}
+
+.search-box input:focus{
+border-color:#0b5394;
+}
+
+.container{
+width:95%;
+max-width:1100px;
+margin:auto;
+padding-bottom:40px;
+}
+
+.place{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#fff;
+padding:15px;
+margin-bottom:15px;
+border-radius:10px;
+box-shadow:0 2px 6px rgba(0,0,0,.15);
+transition:.3s;
+}
+
+.place:hover{
+transform:translateY(-3px);
 }
 
 .left{
@@ -68,290 +99,459 @@ gap:15px;
 }
 
 .icon{
-font-size:30px;
+width:55px;
+height:55px;
+display:flex;
+justify-content:center;
+align-items:center;
+border-radius:50%;
+background:#dbeeff;
+font-size:28px;
 }
 
 .info h3{
-font-size:18px;
-color:#1565c0;
+color:#0b5394;
+margin-bottom:5px;
 }
 
 .info p{
-color:#555;
-margin-top:5px;
+color:#666;
 }
 
 .open-btn{
-background:#1565c0;
-color:white;
-padding:10px 15px;
-border-radius:20px;
+background:#0b5394;
+color:#fff;
+padding:10px 18px;
+border-radius:8px;
 text-decoration:none;
-font-size:14px;
+font-weight:bold;
+}
+
+.open-btn:hover{
+background:#1565c0;
 }
 
 footer{
-background:#1565c0;
-color:white;
+background:#0b5394;
+color:#fff;
 text-align:center;
 padding:15px;
-margin-top:20px;
+margin-top:30px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+.logo{
+width:60px;
+height:60px;
+}
+
+.place{
+flex-direction:column;
+align-items:flex-start;
+gap:15px;
+}
+
+.open-btn{
+width:100%;
+text-align:center;
+}
+
 }
 
 </style>
 
 </head>
 
-
 <body>
-
 
 <header>
 
-<h1>📍 Telangana Village Map</h1>
+<img src="ou-logo.png" alt="OU Logo" class="logo">
 
-<h2>KAMMAREDDY DISTRICT - BANSWADA</h2>
+<div class="title">
+<h1>KAMAREDDY DISTRICT</h1>
+<h2>BANSWADA MANDAL</h2>
+</div>
 
-<input type="text" id="search" 
-onkeyup="searchPlaces()" 
-placeholder="Search Place Name...">
+<img src="otbi-logo.png" alt="OTBI Logo" class="logo">
 
 </header>
 
 
-<div class="container">
-  <!-- 1 -->
+<div class="search-box">
+<input
+type="text"
+id="search"
+placeholder="Search Place..."
+onkeyup="searchPlaces()">
+</div>
+
+
+<div class="container" id="places">
+
+
+<!-- 1 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🌳</div>
+
 <div class="info">
 <h3>BSWD - Children Park Chaitanya Colony</h3>
 <p>Park</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38506,77.874813" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.38506,77.874813"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 2 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🚌</div>
+
 <div class="info">
 <h3>BBSWD - Banswada Bus Stand</h3>
 <p>Bus Stand</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38294,77.875937" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.38294,77.875937"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 3 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🌳</div>
+
 <div class="info">
 <h3>BBSWD - PSR Multi Generation Park</h3>
 <p>Park</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.39356,77.884312" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.39356,77.884312"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 4 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🌳</div>
+
 <div class="info">
 <h3>BBSWD - PSR Children Park</h3>
 <p>Park</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.39044,77.882937" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.39044,77.882937"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 5 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🚌</div>
+
 <div class="info">
 <h3>BBSWD - TGSRTC Bus Depot</h3>
 <p>Bus Depot</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.39381,77.877687" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.39381,77.877687"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 6 -->
+
 <div class="place">
 <div class="left">
-<div class="icon">🏢</div>
+<div class="icon">🏛️</div>
+
 <div class="info">
 <h3>BBSWD - RDO Office</h3>
 <p>Government Office</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.37356,77.883562" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.37356,77.883562"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 7 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🎬</div>
+
 <div class="info">
 <h3>BBSWD - Maheshwari Multiplex</h3>
 <p>Multiplex</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.37618,77.875812" target="_blank">Open Map</a>
+
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.37618,77.875812"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 8 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🌊</div>
+
 <div class="info">
 <h3>BBSWD - Mini Tankbund</h3>
 <p>Tank Bund</p>
 </div>
-</div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38294,77.883437" target="_blank">Open Map</a>
+
 </div>
 
+<a class="open-btn" 
+href="https://www.google.com/maps?q=18.38294,77.883437"
+target="_blank">
+Open Map
+</a>
 
+</div>
 <!-- 9 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🛕</div>
+
 <div class="info">
 <h3>BBSWD - Sai Baba Temple</h3>
 <p>Temple</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38081,77.881812" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.38081,77.881812"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 10 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🏥</div>
+
 <div class="info">
 <h3>BSWD - 7 Hills Hospital</h3>
 <p>Hospital</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38306,77.874437" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.38306,77.874437"
+target="_blank">
+Open Map
+</a>
+
 </div>
-  <!-- 11 -->
+
+
+
+<!-- 11 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">👮</div>
+
 <div class="info">
 <h3>BBSWD - DSP Office</h3>
 <p>Police Office</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38294,77.872812" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.38294,77.872812"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 12 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">📦</div>
+
 <div class="info">
 <h3>BBSWD - ECOM Express Courier Centre</h3>
 <p>Courier Centre</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.38456,77.872937" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.38456,77.872937"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 13 -->
+
 <div class="place">
 <div class="left">
-<div class="icon">🌿</div>
+<div class="icon">🌺</div>
+
 <div class="info">
 <h3>BBSWD - Bharath Gardens</h3>
 <p>Garden</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.39156,77.878563" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.39156,77.878563"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 14 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🏫</div>
+
 <div class="info">
 <h3>BSWD - Newton's High School</h3>
 <p>School</p>
 </div>
+
 </div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.39256,77.875563" target="_blank">Open Map</a>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.39256,77.875563"
+target="_blank">
+Open Map
+</a>
+
 </div>
+
 
 
 <!-- 15 -->
+
 <div class="place">
 <div class="left">
 <div class="icon">🏘️</div>
+
 <div class="info">
 <h3>BSWD - Double Bed Rooms Banswada</h3>
 <p>Housing Colony</p>
 </div>
-</div>
-<a class="open-btn" href="https://www.google.com/maps?q=18.371688,77.867688" target="_blank">Open Map</a>
-</div>
-  </div>
 
+</div>
+
+<a class="open-btn"
+href="https://www.google.com/maps?q=18.371688,77.867688"
+target="_blank">
+Open Map
+</a>
+
+</div>
+</div>
 
 <footer>
-© 2026 KAMMAREDDY DISTRICT - BANSWADA
+© 2026 KAMAREDDY DISTRICT - BANSWADA MANDAL
 </footer>
 
-
 <script>
+function searchPlaces() {
+    let input = document.getElementById("search").value.toLowerCase();
+    let places = document.getElementsByClassName("place");
 
-function searchPlaces(){
-
-let input=document.getElementById("search").value.toLowerCase();
-
-let places=document.getElementsByClassName("place");
-
-
-for(let i=0;i<places.length;i++){
-
-let text=places[i].innerText.toLowerCase();
-
-
-if(text.includes(input)){
-
-places[i].style.display="flex";
-
+    for (let i = 0; i < places.length; i++) {
+        let text = places[i].innerText.toLowerCase();
+        places[i].style.display = text.includes(input) ? "flex" : "none";
+    }
 }
-
-else{
-
-places[i].style.display="none";
-
-}
-
-}
-
-}
-
 </script>
 
-
 </body>
-
 </html>
